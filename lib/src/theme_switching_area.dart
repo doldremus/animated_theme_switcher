@@ -9,8 +9,6 @@ class ThemeSwitchingArea extends StatelessWidget {
   }) : super(key: key);
 
   final Widget child;
-  //one more key to save drawer state
-  final _globalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +56,6 @@ class ThemeSwitchingArea extends StatelessWidget {
 
   Widget _getPage(ThemeData brandTheme) {
     return Theme(
-      key: _globalKey,
       data: brandTheme,
       child: child,
     );
